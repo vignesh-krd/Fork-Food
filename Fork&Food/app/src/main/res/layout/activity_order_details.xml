@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/dl_order_details"
+    tools:context=".OrderDetails"
+    android:background="@color/opyellow">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_order_details_nav_toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/rectangle_12"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/tv_order_details_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ORDER DETAILS"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/segeo_ui"
+            app:layout_constraintTop_toTopOf="@id/img_order_details_nav_toggle"
+            app:layout_constraintBottom_toBottomOf="@id/img_order_details_nav_toggle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_order_details_prof_pic"
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/ic_def_prof_pic"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="20dp"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginBottom="60dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_order_details_home">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/layout_shape">
+
+                <TextView
+                    android:id="@+id/tv_order_details_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="40dp"
+                    android:text="Name"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/segeo_ui"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_order_details_mob_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:text="Mobile Number"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/segeo_ui"
+                    app:layout_constraintStart_toStartOf="@id/tv_order_details_name"
+                    app:layout_constraintTop_toBottomOf="@id/tv_order_details_name" />
+
+                <TextView
+                    android:id="@+id/tv_order_details_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:text="Order Category"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/segeo_ui"
+                    app:layout_constraintStart_toStartOf="@id/tv_order_details_mob_no"
+                    app:layout_constraintTop_toBottomOf="@id/tv_order_details_mob_no" />
+
+                <TextView
+                    android:id="@+id/tv_order_details_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:text="Date"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/segeo_ui"
+                    app:layout_constraintStart_toStartOf="@id/tv_order_details_category"
+                    app:layout_constraintTop_toBottomOf="@id/tv_order_details_category" />
+
+                <TextView
+                    android:id="@+id/tv_order_details_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:text="Time"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/segeo_ui"
+                    app:layout_constraintStart_toStartOf="@id/tv_order_details_date"
+                    app:layout_constraintTop_toBottomOf="@id/tv_order_details_date" />
+
+                <TextView
+                    android:id="@+id/tv_order_details_cust_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_marginEnd="30dp"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/segeo_ui"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tv_order_details_name"
+                    app:layout_constraintTop_toTopOf="@id/tv_order_details_name" />
+
+                <TextView
+                    android:id="@+id/tv_order_details_cust_mob_no"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_marginEnd="30dp"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/segeo_ui"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tv_order_details_mob_no"
+                    app:layout_constraintTop_toTopOf="@id/tv_order_details_mob_no" />
+
+                <TextView
+                    android:id="@+id/tv_order_details_cust_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_marginEnd="85dp"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/segeo_ui"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tv_order_details_date"
+                    app:layout_constraintTop_toTopOf="@id/tv_order_details_date" />
+
+                <TextView
+                    android:id="@+id/tv_order_details_cust_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_marginEnd="85dp"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/segeo_ui"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tv_order_details_time"
+                    app:layout_constraintTop_toTopOf="@id/tv_order_details_time" />
+
+                <TextView
+                    android:id="@+id/tv_order_details_cust_category"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_marginEnd="30dp"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/segeo_ui"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tv_order_details_category"
+                    app:layout_constraintTop_toTopOf="@id/tv_order_details_category" />
+
+                <TextView
+                    android:id="@+id/tv_ordered_foods"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:text="Ordered Foods:"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/tv_order_details_time"
+                    app:layout_constraintTop_toBottomOf="@id/tv_order_details_time" />
+
+                <TextView
+                    android:id="@+id/tv_dish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dish"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/segeo_ui"
+                    app:layout_constraintStart_toStartOf="@id/rv_ordered_foods"
+                    app:layout_constraintBottom_toTopOf="@id/rv_ordered_foods"
+                    app:layout_constraintTop_toBottomOf="@id/tv_ordered_foods"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Price"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/segeo_ui"
+                    app:layout_constraintEnd_toEndOf="@id/rv_ordered_foods"
+                    app:layout_constraintTop_toTopOf="@id/tv_dish" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quantity"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/segeo_ui"
+                    android:layout_marginEnd="20dp"
+                    app:layout_constraintEnd_toStartOf="@id/tv_price"
+                    app:layout_constraintTop_toTopOf="@id/tv_dish" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_ordered_foods"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_dish" />
+
+                <TextView
+                    android:id="@+id/tv_bill_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:text="Bill Details"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/rv_ordered_foods"
+                    app:layout_constraintTop_toBottomOf="@id/rv_ordered_foods" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_food_price"
+                    android:text="Food Price"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/segeo_ui"
+                    app:layout_constraintStart_toStartOf="@id/tv_bill_details"
+                    app:layout_constraintTop_toBottomOf="@id/tv_bill_details"
+                    android:layout_marginTop="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_cust_food_price"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/segeo_ui"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_food_price"
+                    android:layout_marginEnd="30dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_tax"
+                    android:text="@string/taxes_charges"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/segeo_ui"
+                    app:layout_constraintStart_toStartOf="@id/tv_bill_details"
+                    app:layout_constraintTop_toBottomOf="@id/tv_food_price"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_cust_tax"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/segeo_ui"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_tax"
+                    android:layout_marginEnd="30dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_total"
+                    android:text="Total Payable"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/segeo_ui"
+                    app:layout_constraintStart_toStartOf="@id/tv_bill_details"
+                    app:layout_constraintTop_toBottomOf="@id/tv_tax"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_cust_total"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/segeo_ui"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_total"
+                    android:layout_marginEnd="30dp"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_order_details_confirm_order"
+            android:layout_width="0dp"
+            android:layout_height="65dp"
+            android:backgroundTint="@color/yellow"
+            android:text="Confirm Order"
+            android:fontFamily="@font/sitka_small_bold"
+            android:textColor="@color/black"
+            android:stateListAnimator="@null"
+            android:layout_marginHorizontal="9dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:id="@+id/order_details_nav_view"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/menu"
+        android:fitsSystemWindows="true" >
+
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/dl_takeaway"
+    tools:context=".takeaway_layout"
+    android:background="@color/opyellow">
+
+     <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_takeaway_nav_toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/rectangle_12"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/tv_takeaway_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TAKEAWAY"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/segeo_ui"
+            app:layout_constraintTop_toTopOf="@id/img_takeaway_nav_toggle"
+            app:layout_constraintBottom_toBottomOf="@id/img_takeaway_nav_toggle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_takeaway_prof_pic"
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/ic_def_prof_pic"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="20dp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_takeaway_home"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/layout_shape">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_takeaway_name"
+                android:text="Name"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/segeo_ui"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="40dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_takeaway_mob_no"
+                android:text="Mobile Number"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/segeo_ui"
+                app:layout_constraintStart_toStartOf="@id/tv_takeaway_name"
+                app:layout_constraintTop_toBottomOf="@id/tv_takeaway_name"
+                android:layout_marginTop="25dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_takeaway_date"
+                android:text="Date"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/segeo_ui"
+                app:layout_constraintStart_toStartOf="@id/tv_takeaway_mob_no"
+                app:layout_constraintTop_toBottomOf="@id/tv_takeaway_mob_no"
+                android:layout_marginTop="25dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_takeaway_time"
+                android:text="Takeaway Time"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/segeo_ui"
+                app:layout_constraintStart_toStartOf="@id/tv_takeaway_date"
+                app:layout_constraintTop_toBottomOf="@id/tv_takeaway_date"
+                android:layout_marginTop="25dp"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_takeaway_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textSize="14dp"
+                android:fontFamily="@font/segeo_ui"
+                android:padding="5dp"
+                android:background="@drawable/edittext_shape"
+                android:layout_marginStart="130dp"
+                android:layout_marginEnd="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_takeaway_name"
+                app:layout_constraintTop_toTopOf="@id/tv_takeaway_name" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_takeaway_mob_no"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textSize="14dp"
+                android:fontFamily="@font/segeo_ui"
+                android:padding="5dp"
+                android:background="@drawable/edittext_shape"
+                android:layout_marginStart="130dp"
+                android:layout_marginEnd="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_takeaway_mob_no"
+                app:layout_constraintTop_toTopOf="@id/tv_takeaway_mob_no" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_takeaway_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:focusable="false"
+                android:textSize="14dp"
+                android:fontFamily="@font/segeo_ui"
+                android:padding="5dp"
+                android:background="@drawable/edittext_shape"
+                android:layout_marginStart="130dp"
+                android:layout_marginEnd="85dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_takeaway_date"
+                app:layout_constraintTop_toTopOf="@id/tv_takeaway_date" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_takeaway_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="time"
+                android:focusable="false"
+                android:textSize="14dp"
+                android:fontFamily="@font/segeo_ui"
+                android:padding="5dp"
+                android:background="@drawable/edittext_shape"
+                android:layout_marginStart="130dp"
+                android:layout_marginEnd="85dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_takeaway_time"
+                app:layout_constraintTop_toTopOf="@id/tv_takeaway_time" />
+
+            <ImageView
+                android:id="@+id/img_takeaway_basket"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="30dp"
+                android:src="@drawable/ic_takeaway_basket"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_takeaway_time"
+                app:layout_constraintVertical_bias="0.20" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+         <com.google.android.material.button.MaterialButton
+             android:id="@+id/btn_takeaway_proceed"
+             android:layout_width="0dp"
+             android:layout_height="65dp"
+             android:backgroundTint="@color/yellow"
+             android:text="Proceed"
+             android:fontFamily="@font/sitka_small_bold"
+             android:textColor="@color/black"
+             android:stateListAnimator="@null"
+             android:layout_marginHorizontal="9dp"
+             app:layout_constraintBottom_toBottomOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:id="@+id/takeaway_nav_view"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/menu"
+        android:fitsSystemWindows="true" >
+
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

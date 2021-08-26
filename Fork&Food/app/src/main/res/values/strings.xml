@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ForkandFood</string>
+    <string name="taxes_charges"><![CDATA[Taxes & Charges]]></string>
+    <string name="email">forkandfood.orders@gmail.com</string>
+    <!--suppress AndroidDomInspection -->
+    <string name="password">@foodfork$</string>
+</resources>

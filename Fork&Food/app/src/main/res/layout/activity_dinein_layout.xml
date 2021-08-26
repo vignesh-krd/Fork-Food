@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dl_dinein"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/opyellow"
+    tools:context=".dinein_layout">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_dinein_nav_toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/rectangle_12" />
+
+        <TextView
+            android:id="@+id/tv_dinein_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DINE IN"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:fontFamily="@font/segeo_ui"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/img_dinein_nav_toggle"
+            app:layout_constraintBottom_toBottomOf="@id/img_dinein_nav_toggle"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_dinein_prof_pic"
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/ic_def_prof_pic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_def_prof_pic" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/layout_shape"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_dinein_home">
+
+            <TextView
+                android:id="@+id/tv_dinein_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="40dp"
+                android:text="Name"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:fontFamily="@font/segeo_ui"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_dinein_members"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="Members"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:fontFamily="@font/segeo_ui"
+                app:layout_constraintStart_toStartOf="@id/tv_dinein_name"
+                app:layout_constraintTop_toBottomOf="@id/tv_dinein_name" />
+
+            <TextView
+                android:id="@+id/tv_dinein_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="Date"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:fontFamily="@font/segeo_ui"
+                app:layout_constraintStart_toStartOf="@id/tv_dinein_members"
+                app:layout_constraintTop_toBottomOf="@id/tv_dinein_members" />
+
+            <TextView
+                android:id="@+id/tv_dinein_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="Time"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:fontFamily="@font/segeo_ui"
+                app:layout_constraintStart_toStartOf="@id/tv_dinein_date"
+                app:layout_constraintTop_toBottomOf="@id/tv_dinein_date" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_dinein_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="130dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/edittext_shape"
+                android:inputType="text"
+                android:padding="5dp"
+                android:textSize="14dp"
+                android:fontFamily="@font/segeo_ui"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_dinein_name"
+                app:layout_constraintTop_toTopOf="@id/tv_dinein_name" />
+
+            <ImageView
+                android:id="@+id/btn_dinein_minus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_minus"
+                app:layout_constraintEnd_toEndOf="@id/et_dinein_name"
+                app:layout_constraintStart_toStartOf="@id/tv_dinein_members"
+                app:layout_constraintTop_toTopOf="@+id/tv_dinein_members" />
+
+            <TextView
+                android:id="@+id/tv_members_count"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="5dp"
+                android:background="@drawable/bg_member_count"
+                android:text="1"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@id/btn_dinein_plus"
+                app:layout_constraintDimensionRatio="3:3"
+                app:layout_constraintEnd_toStartOf="@id/btn_dinein_plus"
+                app:layout_constraintStart_toEndOf="@id/btn_dinein_minus"
+                app:layout_constraintTop_toTopOf="@id/btn_dinein_minus" />
+
+            <ImageView
+                android:id="@+id/btn_dinein_plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="50dp"
+                android:src="@drawable/ic_plus"
+                app:layout_constraintEnd_toEndOf="@id/et_dinein_name"
+                app:layout_constraintStart_toEndOf="@id/tv_members_count"
+                app:layout_constraintTop_toTopOf="@id/tv_members_count" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_dinein_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="130dp"
+                android:background="@drawable/edittext_shape"
+                android:focusable="false"
+                android:inputType="date"
+                android:padding="5dp"
+                android:textSize="14dp"
+                android:fontFamily="@font/segeo_ui"
+                app:layout_constraintEnd_toEndOf="@id/btn_dinein_plus"
+                app:layout_constraintStart_toStartOf="@id/tv_dinein_date"
+                app:layout_constraintTop_toTopOf="@id/tv_dinein_date" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_dinein_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="130dp"
+                android:background="@drawable/edittext_shape"
+                android:focusable="false"
+                android:inputType="time"
+                android:padding="5dp"
+                android:textSize="14dp"
+                android:fontFamily="@font/segeo_ui"
+                app:layout_constraintEnd_toEndOf="@id/et_dinein_date"
+                app:layout_constraintStart_toStartOf="@id/tv_dinein_time"
+                app:layout_constraintTop_toTopOf="@id/tv_dinein_time" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select the table"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/segeo_ui"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintBottom_toTopOf="@id/img_dinein_table" />
+
+            <ImageView
+                android:id="@+id/img_dinein_table"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_table"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_dinein_time" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="0dp"
+                app:layout_constraintBottom_toBottomOf="@id/img_dinein_table"
+                app:layout_constraintEnd_toEndOf="@id/img_dinein_table"
+                app:layout_constraintStart_toStartOf="@id/img_dinein_table"
+                app:layout_constraintTop_toTopOf="@id/img_dinein_table">
+
+                <ImageView
+                    android:id="@+id/img_table_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    app:layout_constraintBottom_toTopOf="@id/img_table_3"
+                    app:layout_constraintEnd_toStartOf="@id/img_table_2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_table_1" />
+
+                <ImageView
+                    android:id="@+id/img_table_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    app:layout_constraintBottom_toTopOf="@id/img_table_4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/img_table_1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_table_2" />
+
+                <ImageView
+                    android:id="@+id/img_table_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    app:layout_constraintBottom_toTopOf="@id/img_table_5"
+                    app:layout_constraintEnd_toStartOf="@id/img_table_4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/img_table_1"
+                    app:srcCompat="@drawable/ic_table_3" />
+
+                <ImageView
+                    android:id="@+id/img_table_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    app:layout_constraintBottom_toTopOf="@id/img_table_6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/img_table_3"
+                    app:layout_constraintTop_toBottomOf="@id/img_table_2"
+                    app:srcCompat="@drawable/ic_table_4" />
+
+                <ImageView
+                    android:id="@+id/img_table_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="13dp"
+                    android:padding="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/img_table_6"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/img_table_3"
+                    app:srcCompat="@drawable/ic_table_5" />
+
+                <ImageView
+                    android:id="@+id/img_table_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="13dp"
+                    android:padding="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/img_table_5"
+                    app:layout_constraintTop_toBottomOf="@id/img_table_4"
+                    app:srcCompat="@drawable/ic_table_6" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_dinein_proceed"
+            android:layout_width="0dp"
+            android:layout_height="65dp"
+            android:backgroundTint="@color/yellow"
+            android:layout_marginHorizontal="9dp"
+            android:text="Proceed"
+            android:fontFamily="@font/sitka_small_bold"
+            android:textColor="@color/black"
+            android:stateListAnimator="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/dinein_nav_view"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/menu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

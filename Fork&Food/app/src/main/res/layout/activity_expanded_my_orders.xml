@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dl_exp_myod"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/opyellow"
+    tools:context=".ExpandedMyOrders">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_exp_myod_nav_toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/rectangle_12" />
+
+        <TextView
+            android:id="@+id/tv_exp_myod_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MY ORDERS"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="@id/img_exp_myod_nav_toggle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/img_exp_myod_nav_toggle" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_exp_myod_prof_pic"
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/ic_def_prof_pic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_def_prof_pic" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/layout_shape"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_exp_myod_home">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_exp_myod_order_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginTop="30dp"
+                    android:text="Order Number - "
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_exp_myod_order_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="23dp"
+                    android:text="Takeaway"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_exp_myod_order_number" />
+
+                <TextView
+                    android:id="@+id/tv_exp_myod_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Date of Order"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/segeo_ui"
+                    app:layout_constraintStart_toStartOf="@id/tv_exp_myod_order_number"
+                    app:layout_constraintTop_toBottomOf="@id/tv_exp_myod_order_number" />
+
+                <TextView
+                    android:id="@+id/tv_exp_myod_dof"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/segeo_ui"
+                    app:layout_constraintEnd_toEndOf="@id/tv_exp_myod_order_category"
+                    app:layout_constraintTop_toBottomOf="@id/tv_exp_myod_order_number" />
+
+                <TextView
+                    android:id="@+id/tv_exp_myod_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Time of Order"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/segeo_ui"
+                    app:layout_constraintStart_toStartOf="@id/tv_exp_myod_date"
+                    app:layout_constraintTop_toBottomOf="@id/tv_exp_myod_date" />
+
+                <TextView
+                    android:id="@+id/tv_exp_myod_tof"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/segeo_ui"
+                    app:layout_constraintEnd_toEndOf="@id/tv_exp_myod_order_category"
+                    app:layout_constraintTop_toBottomOf="@id/tv_exp_myod_date" />
+
+                <TextView
+                    android:id="@+id/tv_exp_myod_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Paid Price"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/segeo_ui"
+                    app:layout_constraintStart_toStartOf="@id/tv_exp_myod_time"
+                    app:layout_constraintTop_toBottomOf="@id/tv_exp_myod_time" />
+
+                <TextView
+                    android:id="@+id/tv_exp_myod_paid_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/segeo_ui"
+                    app:layout_constraintEnd_toEndOf="@id/tv_exp_myod_order_category"
+                    app:layout_constraintTop_toBottomOf="@id/tv_exp_myod_time" />
+
+                <TextView
+                    android:id="@+id/tv_ordered_foods"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:text="Ordered Foods:"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/tv_exp_myod_price"
+                    app:layout_constraintTop_toBottomOf="@id/tv_exp_myod_price" />
+
+                <TextView
+                    android:id="@+id/tv_dish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Dish"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/segeo_ui"
+                    app:layout_constraintBottom_toTopOf="@id/rv_exp_myod_foods"
+                    app:layout_constraintStart_toStartOf="@id/rv_exp_myod_foods"
+                    app:layout_constraintTop_toBottomOf="@id/tv_ordered_foods" />
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Price"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/segeo_ui"
+                    app:layout_constraintEnd_toEndOf="@id/rv_exp_myod_foods"
+                    app:layout_constraintTop_toTopOf="@id/tv_dish" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="Quantity"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/segeo_ui"
+                    app:layout_constraintEnd_toStartOf="@id/tv_price"
+                    app:layout_constraintTop_toTopOf="@id/tv_dish" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_exp_myod_foods"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_dish" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/exp_myod_nav_view"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/menu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "743227129172",
+    "project_id": "fork-and-food-dd798",
+    "storage_bucket": "fork-and-food-dd798.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:743227129172:android:7a59a2ff8fa4386ce2dcc1",
+        "android_client_info": {
+          "package_name": "com.example.forkandfood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "743227129172-pnt01a5c7nrm4ekbo6d53j5m5nuuvt2i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhUFRCbNo8KA9v64gVHJdWhw3w1Gm068o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "743227129172-pnt01a5c7nrm4ekbo6d53j5m5nuuvt2i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
